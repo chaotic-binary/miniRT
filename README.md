@@ -1,18 +1,7 @@
 # MiniRT
-
-![Screenshot](/bmp_rendered/arare1_0.bmp)
-
-![Screenshot](/bmp_rendered/ice_cream.bmp)
-
-![Screenshot](/bmp_rendered/snowman.bmp)
-
-![Screenshot](/bmp_rendered/house_inside_0.bmp)
-
-![Screenshot](/bmp_rendered/plane_mix.bmp)
-
 Takes as a first argument a scene description file with the .rt
-extension.
-If second argument id --save (of -s) it saves bmp image for the first camera of the scene
+extension: miniRT ./scene.rt
+If second argument id --save (of -s) it saves bmp image for the first camera of the scene: miniRT ./scene.rt -s
 <br/>
 Each type of element can be separated by one or more line break(s).
 Each type of information from an element can be separated by one or more
@@ -128,3 +117,15 @@ cu 0.0,0.0,20.6 1.0,0.0,0.0 12.6 255,0,255<br/>
  3d normalized orientation vector. In range [-1,1] for each x,y,z axis<br/>
  side size: 12.6<br/>
  R,G,B colors in range [0-255]: 255, 0, 255<br/></p>
+
+ <p>Y axis looks down, so -10 is up and 10 is down, but it's a feature </p>
+
+![Screenshot](/bmp_rendered/arare1_0.bmp)
+
+![Screenshot](/bmp_rendered/ice_cream.bmp)
+
+![Screenshot](/bmp_rendered/snowman.bmp)
+
+![Screenshot](/bmp_rendered/house_inside_0.bmp)
+
+![Screenshot](/bmp_rendered/plane_mix.bmp)

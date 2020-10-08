@@ -6,7 +6,7 @@
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/17 16:01:44 by ttamesha          #+#    #+#             */
-/*   Updated: 2020/09/28 20:41:21 by ttamesha         ###   ########.fr       */
+/*   Updated: 2020/10/08 16:48:39 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void			parse_color(char *arg, t_argb *color, char **args, \
 void			parse_coordinates(char *arg, t_vec3 *point, char **args,\
 							int line_num);
 
-int				is_uint(char *w);
+int				is_int(char *w);
 int				is_float(char *w, int neg);
 int				arg_num(char **args);
 int				check_float_range(float n, float min, float max);

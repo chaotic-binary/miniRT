@@ -6,7 +6,7 @@
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 17:49:53 by ttamesha          #+#    #+#             */
-/*   Updated: 2020/09/28 20:43:19 by ttamesha         ###   ########.fr       */
+/*   Updated: 2020/10/08 16:48:26 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,13 @@ void	parse_color(char *arg, t_argb *color, char **args, int line_num)
 	i = -1;
 	while (val[++i])
 	{
-		if (!is_uint(val[i]))
+		if (!is_int(val[i]))
 			parse_vec_exit(args, val, ERR_COL, line_num);
 	}
 	*color = color_new(0, (float)ft_atoi(val[0]) / 255.0f, \
 			(float)ft_atoi(val[1]) / 255.0f, (float)ft_atoi(val[2]) / 255.0f);
-	if ((*color).r > 1.0 || (*color).g > 1.0 || (*color).b > 1.0)
+	if ((*color).r > 1.0 || (*color).g > 1.0 || (*color).b > 1.0 || \
+		(*color).r < 0.0 || (*color).g < 0.0 || (*color).b < 0.0)
 	{
 		write(1, "Error\nColors should be in range [0,255]\n", 40);
 		parse_vec_exit(args, val, ERR_COL, line_num);

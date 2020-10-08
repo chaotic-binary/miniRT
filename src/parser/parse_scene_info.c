@@ -6,7 +6,7 @@
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 17:54:28 by ttamesha          #+#    #+#             */
-/*   Updated: 2020/10/03 23:27:46 by ttamesha         ###   ########.fr       */
+/*   Updated: 2020/10/08 16:48:21 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void		parse_resolution(char **args, t_scene *scene, int line_num)
 	if (scene->resolution[2])
 		parser_exit(args, ERR_DOUBLE_R);
 	scene->resolution[2] = 1;
-	if (arg_num(args) != 3 || !is_uint(args[1]) || !is_uint(args[2]))
+	if (arg_num(args) != 3 || !is_int(args[1]) || !is_int(args[2]))
 		parser_exit(args, line_num);
 	scene->resolution[X] = ft_atoi(args[1]);
 	scene->resolution[Y] = ft_atoi(args[2]);
@@ -63,7 +63,7 @@ void		parse_camera(char **args, t_scene *scene, int line_num)
 	t_c	*cam;
 	int	n;
 
-	if ((n = arg_num(args)) < 4 || n > 5 || !is_uint(args[3]))
+	if ((n = arg_num(args)) < 4 || n > 5 || !is_int(args[3]))
 		parser_exit(args, line_num);
 	if (!(cam = (t_c *)malloc_c(sizeof(t_c))))
 		parser_exit(args, ERRNO);

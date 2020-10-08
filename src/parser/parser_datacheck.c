@@ -6,7 +6,7 @@
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 17:47:43 by ttamesha          #+#    #+#             */
-/*   Updated: 2020/10/03 23:04:35 by ttamesha         ###   ########.fr       */
+/*   Updated: 2020/10/08 16:51:33 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,12 @@ int	arg_num(char **args)
 	return (i);
 }
 
-int	is_uint(char *w)
+int	is_int(char *w)
 {
 	int i;
 
 	i = -1;
-	if (w[0] == '-')
-	{
-		write(1, "Error\nIncorrect negative int value\n", 35);
-		return (0);
-	}
-	if (w[0] == '+')
+	if (w[0] == '+' || w[0] == '-')
 		++i;
 	while (w[++i])
 	{
@@ -52,7 +47,7 @@ int	is_float(char *w, int neg)
 	dot = 0;
 	if (w[0] == '-' && !neg)
 	{
-		write(1, "Error\nNegative parameter or light ratio\n", 40);
+		write(1, "Error\nNegative obj size or light ratio\n", 39);
 		return (0);
 	}
 	if ((neg && w[i] == '-') || w[i] == '+')

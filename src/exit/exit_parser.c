@@ -6,7 +6,7 @@
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 19:28:41 by ttamesha          #+#    #+#             */
-/*   Updated: 2020/09/22 17:18:14 by ttamesha         ###   ########.fr       */
+/*   Updated: 2020/10/08 16:39:45 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	parser_exit(char **args, int error_num)
 		write(1, "Error\nObject of 0 size doesn't make sense\n", 42);
 	else
 	{
-		write(1, "Error\nwhile parsing line ", 25);
+		write(1, "Error while parsing line ", 25);
 		ft_putnbr_fd(error_num, 1);
 		write(1, "\n", 1);
 	}
@@ -41,13 +41,13 @@ int	parse_vec_exit(char **args, char **val, int error_num, int line_num)
 	malloc_c(0);
 	if (error_num == ERR_COL)
 	{
-		write(1, "Error\nwhile parsing color in line ", 34);
+		write(1, "Error while parsing color in line ", 34);
 		ft_putnbr_fd(line_num, 1);
 		write(1, "\n", 1);
 	}
 	else if (error_num == ERR_COORD)
 	{
-		write(1, "Error\nwhile parsing coordinates in line ", 41);
+		write(1, "Error while parsing coordinates in line ", 41);
 		ft_putnbr_fd(line_num, 1);
 		write(1, "\n", 1);
 	}
